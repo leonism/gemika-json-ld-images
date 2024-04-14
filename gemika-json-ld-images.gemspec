@@ -8,6 +8,12 @@ Gem::Specification.new do |spec|
   spec.authors = ["gerry leo nugroho"]
   spec.email = ["gerryleonugroho@gmail.com"]
 
+  Gem::Specification.new do |gem|
+  gem.name        = 'gemika-json-ld-images'
+  gem.version     = '0.1.0'
+  gem.files       = Dir['lib/**/*'] + ['README.md', 'LICENSE', 'Gemfile', 'Rakefile']
+
+
   spec.summary = "A Ruby gem for generating JSON-LD schema for images and integrating them into Jekyll projects"
   spec.description = "Gemika JSON-LD Images is a Ruby gem designed to streamline the process of generating JSON-LD schema for images and integrating them seamlessly into HTML and Markdown documents, particularly in Jekyll projects. With this gem, you can enhance the SEO performance of your website by providing search engines with structured data about the images on your pages."
   spec.homepage = "https://github.com/leonism/gemika-json-ld-images"
