@@ -72,5 +72,17 @@ module Gemika
     rescue StandardError => e
       @logger.error "Failed to extract images from Markdown content. #{e.message}"
     end
+
+    def integrate_json_ld(content, json_ld_objects)
+      json_ld_string = json_ld_objects.map do |json_ld_object|
+        "<script type=\"application/ld+json\">\n#{json_ld_object.to_json}\n</script>"
+      end.join("\n")
+
+      if content.include?("<!-- JSON-LD -->")
+        content.gsub("<!-- JSON-LD -->", json_ld_string)
+      else
+        "#{content}\n#{json_ld_string}"
+      end
+    end
   end
 end

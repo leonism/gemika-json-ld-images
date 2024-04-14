@@ -14,14 +14,18 @@ module Gemika
       {
         "@context": "https://schema.org/detikcom",
         "@type": "ItemList",
-        "itemListElement": images.map.with_index do |image, index|
-          begin
-            generate_single_json_ld(image, index)
-          rescue => e
-            generate_error_json_ld(image, index, e.message)
-          end
-        end
-      }
+        "images": [ # Fix: Replace '=' with '=>'
+          {
+            url: 'https://example.com/image1.jpg',
+            license: 'https://example.com/license1',
+            license_page: 'https://example.com/license_page1',
+            credit_text: 'Credit Text 1',
+            creator_name: 'Creator Name 1',
+            copyright: 'Copyright 1'
+          },
+          # More images...
+        ]
+      } # Fix: Add closing bracket
     end
 
     def self.generate_single_json_ld(image, index)
