@@ -2,9 +2,10 @@
 
 require 'yaml'
 require 'nokogiri'
-require 'fileutils' # Add missing require statement
+require 'fileutils' 
 
 module Gemika
+  # The `Gemika` module provides functionality for parsing HTML & Markdown documents and extracting images from them.
   class JsonLdImages
     def initialize
       @config = read_config
@@ -48,18 +49,26 @@ module Gemika
         extract_images_from_html(content)
       elsif File.extname(path) == '.md'
         extract_images_from_markdown(content)
+      else
+        puts "Error: Unsupported file format for #{path}."
       end
+    rescue StandardError => e
+      puts "Error: Failed to process #{path}. #{e.message}"
     end
 
     def extract_images_from_html(content)
       doc = Nokogiri::HTML(content)
       images = doc.css('img').map { |img| img['src'] }
       # Store the extracted image paths for later processing
+    rescue StandardError => e
+      puts "Error: Failed to extract images from HTML content. #{e.message}"
     end
 
     def extract_images_from_markdown(content)
       images = content.scan(/\!\[.*?\]\((.*?)\)/).flatten
       # Store the extracted image paths for later processing
+    rescue StandardError => e
+      puts "Error: Failed to extract images from Markdown content. #{e.message}"
     end
   end
 end
