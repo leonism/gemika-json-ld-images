@@ -6,12 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "gemika-json-ld-images"
   spec.version = Gemika::Json::Ld::Images::VERSION
   spec.authors = ["gerry leo nugroho"]
-  spec.email = ["gerryleonugroho@gmail.com"]
-
-  Gem::Specification.new do |gem|
-  gem.name        = 'gemika-json-ld-images'
-  gem.version     = '0.1.0'
-  gem.files       = Dir['lib/**/*'] + ['README.md', 'LICENSE', 'Gemfile', 'Rakefile']
+  spec.email = ["gerryleonugroho@gmail.com"]  
 
 
   spec.summary = "A Ruby gem for generating JSON-LD schema for images and integrating them into Jekyll projects"
@@ -43,4 +38,11 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+end
+
+Gem::Specification.new do |gem|
+  gem.name        = 'gemika-json-ld-images'
+  gem.version     = '0.1.0'
+  gem.files       = Dir['lib/**/*'] + ['README.md', 'LICENSE', 'Gemfile', 'Rakefile']
+  # other attributes...
 end
