@@ -29,5 +29,3 @@ module Gemika
     end
   end
 end
-
-

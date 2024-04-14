@@ -2,7 +2,6 @@
 
 require 'json'
 
-# The Gemika module provides functionality for generating JSON-LD data for images.
 module Gemika
   class JsonLdGenerator
     def self.generate(images)
