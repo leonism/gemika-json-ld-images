@@ -1,5 +1,7 @@
 # lib/gemika/json_ld_generator.rb
 
+require 'json'
+
 module Gemika
   class JsonLdGenerator
     def self.generate(images)
@@ -33,4 +35,3 @@ module Gemika
     end
   end
 end
-g

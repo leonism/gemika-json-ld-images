@@ -3,6 +3,8 @@
 # frozen_string_literal: true
 
 require_relative "lib/gemika/json/ld/images/version"
+require_relative "lib/gemika/json/ld/images/yaml" 
+require_relative "lib/gemika/json/ld/images/nokogiri"
 
 Gem::Specification.new do |spec|
   spec.name = "gemika-json-ld-images"

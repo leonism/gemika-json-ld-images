@@ -1,5 +1,7 @@
 # lib/gemika/json_ld_composer.rb
 
+require 'json'
+
 module Gemika
   class JsonLdComposer
     JSON_LD_PLACEHOLDER = '<!-- JSON-LD -->'.freeze

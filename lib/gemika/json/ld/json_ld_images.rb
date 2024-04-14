@@ -2,6 +2,7 @@
 
 require 'yaml'
 require 'nokogiri'
+require 'fileutils' # Add missing require statement
 
 module Gemika
   class JsonLdImages
@@ -19,7 +20,12 @@ module Gemika
     private
 
     def read_config
-      YAML.load_file('_config.yml')
+      begin
+        @config = YAML.load_file('_config.yml')
+      rescue Errno::ENOENT
+        puts "Error: Configuration file not found."
+        exit
+      end
     end
 
     def get_document_paths
