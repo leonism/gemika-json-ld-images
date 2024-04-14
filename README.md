@@ -1,8 +1,8 @@
 ---
 # Gemika JSON-LD Images
 
-- `![](https://cdn.discordapp.com/attachments/1225012436957007894/1229008789022314558/gerryleonugroho_A_Ruby_gem_for_scanning_images_in_html_and_mark_846d7c71-911b-4615-bd83-6e4157c51adc.png
- =250x250)`
+![](https://cdn.discordapp.com/attachments/1225012436957007894/1229008789022314558/gerryleonugroho_A_Ruby_gem_for_scanning_images_in_html_and_mark_846d7c71-911b-4615-bd83-6e4157c51adc.png
+ =250x250)
 
 The Gemika JSON-LD Images Gem is a powerful tool designed to seamlessly integrate JSON-LD schema for images into your Jekyll projects. This gem simplifies the process of adding structured data to your website, improving its visibility and accessibility to search engines. Whether you're a digital marketer, SEO specialist, or website owner, this gem offers a convenient solution for enhancing your website's SEO performance.
 
