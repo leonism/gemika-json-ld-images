@@ -13,7 +13,7 @@ module Gemika
 
     def self.generate_json_ld(images)
       {
-        "@context": "https://schema.org/",
+        "@context": "https://schema.org/detikcom",
         "@type": "ItemList",
         "itemListElement": images.map.with_index do |image, index|
           begin
