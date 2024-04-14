@@ -3,7 +3,7 @@
 
 ![screenshot](gemika-json-ld-images.png)
 
-The Gemika JSON-LD Images Gem is a powerful tool designed to seamlessly integrate JSON-LD schema for images into your Jekyll projects. This gem simplifies the process of adding structured data to your website, improving its visibility and accessibility to search engines. Whether you're a digital marketer, SEO specialist, or website owner, this gem offers a convenient solution for enhancing your website's SEO perfgemika-json-ld-images.pngormance.
+The **Gemika JSON-LD Images** Gem is a powerful tool designed to seamlessly integrate JSON-LD schema for images into your Jekyll projects. This gem simplifies the process of adding structured data to your website, improving its visibility and accessibility to search engines. Whether you're a digital marketer, SEO specialist, or website owner, this gem offers a convenient solution for enhancing your website's images SEO performance.
 
 Gemika JSON-LD Images is a Ruby gem designed to streamline the process of generating JSON-LD schema for images and integrating them seamlessly into HTML and Markdown documents, particularly in Jekyll projects. With this gem, you can enhance the SEO performance of your website by providing search engines with structured data about the images on your pages.
 
@@ -19,33 +19,33 @@ Gemika JSON-LD Images is a Ruby gem designed to streamline the process of genera
 - **Blog Posts**: Enhance the SEO of your blog posts by providing structured data for images embedded within them.
 - **Product Pages**: Improve the visibility of product images on e-commerce websites by including JSON-LD schema for each image.
 - **Portfolio Websites**: Showcase your work effectively by integrating JSON-LD schema for images in your portfolio pages.
-- ** Digital Marketers**: Easily add JSON-LD schema for images to optimize website content for search engines.
-- ** SEO Specialists**: Improve website visibility and search engine rankings by providing structured data for images.
-- ** Website Owners**: Enhance website accessibility and user experience by incorporating JSON-LD schema into Jekyll projects.
+- **Digital Marketers**: Easily add JSON-LD schema for images to optimize website content for search engines.
+- **SEO Specialists**: Improve website visibility and search engine rankings by providing structured data for images.
+- **Website Owners**: Enhance website accessibility and user experience by incorporating JSON-LD schema into Jekyll projects.
 
 ## Installation:
 
 To install Gemika JSON-LD Images, follow these steps:
 
-1. Clone the repository from GitHub:
+1. **Clone the repository:** Clone the GitHub repository to your local machine using the following command:
 
    ```bash
    git clone https://github.com/leonism/gemika-json-ld-images.git
    ```
 
-2. Navigate to the project directory:
+2. **Navigate to the Directory:** Change into the cloned directory:
 
    ```bash
    cd gemika-json-ld-images
    ```
 
-3. Build and install the gem using bundle:
+3. **Install the Gem:** Build & install the gem using Bundler:
 
    ```bash
    bundle install
    ```
 
-4. Build and install the gem using bundle:
+4. **Verify Installation:** Confirm that the gem has been successfully installed:
 
 ```bash
    gem list | grep gemika-json-ld-images
@@ -55,9 +55,10 @@ To install Gemika JSON-LD Images, follow these steps:
 
 ### Integrating with Jekyll Projects:
 
-To integrate Gemika JSON-LD Images into an existing Jekyll project, follow these steps:
+Follow these step-by-step instructions to integrate the Gemika JSON-LD Images Gem into your existing Jekyll projects:
 
-1. Open the `_config.yml` file in your Jekyll project.
+1. Open the `_config.yml` file, in your Jekyll project.
+Open the `_config.yml` file in your Jekyll project and specify the directories/folder to include and/or exclude for scanning HTML and Markdown documents.
 
 2. Add the directories you want to include and exclude for scanning HTML and Markdown documents. For example:
 
