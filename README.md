@@ -88,7 +88,8 @@ Bundler will download and install the Gemika JSON-LD Images Gem along with any o
 
     Ensure that the directories containing your HTML and Markdown files are included.
 
-5. Use the gem in your Jekyll project to scan and generate JSON-LD schema for images. Here's an example of how to use it in a Jekyll layout or template:
+5. Use the gem in your Jekyll project to scan and generate JSON-LD schema for images. 
+Here's an example of how to use it in a Jekyll layout or template:
 
     ```liquid
     {% assign json_ld_images = Gemika::JsonLdImages.new %}

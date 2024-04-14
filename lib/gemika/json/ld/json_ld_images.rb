@@ -23,7 +23,8 @@ module Gemika
     end
 
     def get_document_paths
-      include_dirs = @config['include'] || []
+      include_dirs = @config['include_scan'] || []
+      exclude_dirs = @config['exclude_scan'] || []
       document_paths = []
 
       include_dirs.each do |dir|
@@ -32,7 +33,7 @@ module Gemika
         end
       end
 
-      document_paths
+      document_paths.reject { |path| exclude_dirs.any? { |ex_dir| path.start_with?(ex_dir) } }
     end
 
     def process_document(path)

@@ -1,3 +1,5 @@
+# gemika-json-ld-images.gemspec
+
 # frozen_string_literal: true
 
 require_relative "lib/gemika/json/ld/images/version"
@@ -24,6 +26,10 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  # Add dependencies
+  spec.add_runtime_dependency "yaml"
+  spec.add_runtime_dependency "nokogiri"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"

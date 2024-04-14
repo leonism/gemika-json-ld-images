@@ -9,6 +9,14 @@ module Gemika
     private
 
     def self.generate_json_ld(image)
+      if image.is_a?(Array)
+        image.map { |img| generate_single_json_ld(img) }
+      else
+        generate_single_json_ld(image)
+      end
+    end
+
+    def self.generate_single_json_ld(image)
       {
         "@context": "https://schema.org/",
         "@type": "ImageObject",
@@ -25,3 +33,4 @@ module Gemika
     end
   end
 end
+g
