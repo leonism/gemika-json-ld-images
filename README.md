@@ -1,6 +1,10 @@
 ---
-
 # Gemika JSON-LD Images
+
+- `![](https://cdn.discordapp.com/attachments/1225012436957007894/1229008789022314558/gerryleonugroho_A_Ruby_gem_for_scanning_images_in_html_and_mark_846d7c71-911b-4615-bd83-6e4157c51adc.png
+ =250x250)`
+
+The Gemika JSON-LD Images Gem is a powerful tool designed to seamlessly integrate JSON-LD schema for images into your Jekyll projects. This gem simplifies the process of adding structured data to your website, improving its visibility and accessibility to search engines. Whether you're a digital marketer, SEO specialist, or website owner, this gem offers a convenient solution for enhancing your website's SEO performance.
 
 Gemika JSON-LD Images is a Ruby gem designed to streamline the process of generating JSON-LD schema for images and integrating them seamlessly into HTML and Markdown documents, particularly in Jekyll projects. With this gem, you can enhance the SEO performance of your website by providing search engines with structured data about the images on your pages.
 
@@ -16,6 +20,9 @@ Gemika JSON-LD Images is a Ruby gem designed to streamline the process of genera
 - **Blog Posts**: Enhance the SEO of your blog posts by providing structured data for images embedded within them.
 - **Product Pages**: Improve the visibility of product images on e-commerce websites by including JSON-LD schema for each image.
 - **Portfolio Websites**: Showcase your work effectively by integrating JSON-LD schema for images in your portfolio pages.
+- ** Digital Marketers**: Easily add JSON-LD schema for images to optimize website content for search engines.
+- ** SEO Specialists**: Improve website visibility and search engine rankings by providing structured data for images.
+- ** Website Owners**: Enhance website accessibility and user experience by incorporating JSON-LD schema into Jekyll projects.
 
 ## Installation:
 
@@ -33,12 +40,17 @@ To install Gemika JSON-LD Images, follow these steps:
    cd gemika-json-ld-images
    ```
 
-3. Build and install the gem:
+3. Build and install the gem using bundle:
 
    ```bash
-   gem build gemika-json-ld-images.gemspec
-   gem install gemika-json-ld-images-<version>.gem
+   bundle install
    ```
+
+4. Build and install the gem using bundle:
+
+```bash
+   gem list | grep gemika-json-ld-images
+```
 
 ## Usage:
 
@@ -80,7 +92,41 @@ To integrate Gemika JSON-LD Images into an existing Jekyll project, follow these
 
    Replace `page.content` with the variable containing your document content. This will integrate the JSON-LD schema into your documents.
 
-5. Verify the integration by viewing the source of your HTML documents. You should see the JSON-LD schema included in the `<head>` or `<body>` section of the document.
+5. Or, here's an easier method to implement it, call them from your main layout. In your Jekyll layout files (e.g., default.html), add the Liquid syntax for embedding JSON-LD schema:
+
+    ```liquid
+    {% if page.json_ld_images %}
+    {% for json_ld_image in page.json_ld_images %}
+        {{ json_ld_image | raw }}
+    {% endfor %}
+    {% endif %}
+    ```
+
+6. Run Jekyll Build: Build your Jekyll project to generate the HTML output:
+
+    ```bash
+    bundle exec jekyll build
+    ```
+7. Verify JSON-LD Output: View the source code of your HTML documents to verify that the JSON-LD schema for images has been successfully integrated. You should see the JSON-LD schema included in the `<head>` or `<body>` section of the document.
+
+    ```liquid
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org/",
+        "@type": "ImageObject",
+        "contentUrl": "https://example.com/image.jpg",
+        "license": "https://example.com/license",
+        "acquireLicensePage": "https://example.com/license-page",
+        "creditText": "Photographer Name",
+        "creator": {
+        "@type": "Person",
+        "name": "Photographer Name"
+        },
+        "copyrightNotice": "Copyright Notice"
+    }]
+    </script>
+    ```
 
 ## Contributing
 
@@ -98,23 +144,3 @@ Everyone interacting in the Gemika::Json::Ld::Images project's codebases, issue 
 ---
 
 <!-- @format -->
-
-# Gemika::Json::Ld::Images
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gemika/json/ld/images`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add gemika-json-ld-images
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install gemika-json-ld-images
-
-## Usage
-
-TODO: Write usage instructions here
