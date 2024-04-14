@@ -1,5 +1,3 @@
-# lib/gemika/json_ld_composer.rb
-
 require 'json'
 
 module Gemika
@@ -13,13 +11,15 @@ module Gemika
     # @param json_ld_objects [Array] An array of JSON-LD objects.
     # @return [String] The content with the JSON-LD objects integrated.
     def self.integrate_json_ld(content, json_ld_objects)
+      return content if json_ld_objects.empty?
+
       json_ld_string = json_ld_objects.map do |json_ld_object|
         begin
           json_ld_object.to_json
         rescue => e
-          "Error: #{e.message} - Each Time It Couldn't Process Something"
+          "Error: #{e.message} - Unable to process JSON-LD object"
         end
-      end.join("\n")
+      end.compact.join("\n")
 
       if content.include?(JSON_LD_PLACEHOLDER)
         content.gsub(JSON_LD_PLACEHOLDER, json_ld_string)
