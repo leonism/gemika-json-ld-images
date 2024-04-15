@@ -2,11 +2,16 @@
 
 # frozen_string_literal: true
 
-require_relative "lib/gemika/json_ld/images/version"
+require "nokogiri" 
+require "json"
+
+# Construct the file path dynamically
+version_file = File.join(__dir__, "lib", "gemika", "json_ld_images", "version.rb")
+require version_file
 
 Gem::Specification.new do |spec|
   spec.name          = "gemika-json-ld-images"
-  spec.version       = Gemika::JsonLd::Images::VERSION
+  spec.version       = Gemika::JsonLdImages::VERSION
   spec.authors       = ["gerry leo nugroho"]
   spec.email         = ["gerryleonugroho@gmail.com"]
 
@@ -30,4 +35,7 @@ Gem::Specification.new do |spec|
   # Add dependencies
   spec.add_runtime_dependency "nokogiri"
   spec.add_runtime_dependency "json"
+  
+  # Add development dependency
+  spec.add_development_dependency "bundler"
 end
