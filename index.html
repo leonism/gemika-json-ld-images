@@ -1,0 +1,91 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Gemika::JsonLdGenerator Documentation</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+			h1,
+			h2,
+			h3 {
+				color: #333;
+			}
+			code {
+				background-color: #f9f9f9;
+				padding: 2px 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Gemika::JsonLdGenerator</h1>
+		<p>
+			The
+			<code>Gemika::JsonLdGenerator</code>
+			is a Ruby class that generates JSON-LD (JSON for Linking Data) for images.
+			JSON-LD is a method of encoding Linked Data using JSON. It is used to
+			structure data in web pages, making it easier for search engines to
+			understand the content.
+		</p>
+
+		<h2>Installation</h2>
+		<p>Add this line to your application's Gemfile:</p>
+		<code>gem 'gemika-json-ld-generator'</code>
+		<p>And then execute:</p>
+		<code>$ bundle install</code>
+		<p>Or install it yourself as:</p>
+		<code>$ gem install gemika-json-ld-generator</code>
+
+		<h2>Usage</h2>
+		<p>
+			To use the
+			<code>Gemika::JsonLdGenerator</code>
+			, you need to call the
+			<code>generate</code>
+			class method with an array of images as the argument. Each image should be
+			a hash with the following keys:
+		</p>
+		<ul>
+			<li>
+				<code>url</code>
+				: The URL of the image.
+			</li>
+			<li>
+				<code>license</code>
+				: The URL of the image's license.
+			</li>
+			<li>
+				<code>license_page</code>
+				: The URL of the page containing the image's license.
+			</li>
+			<li>
+				<code>credit_text</code>
+				: The credit text for the image.
+			</li>
+			<li>
+				<code>creator_name</code>
+				: The name of the image's creator.
+			</li>
+			<li>
+				<code>copyright</code>
+				: The copyright information for the image.
+			</li>
+		</ul>
+
+		<h2>Contributing</h2>
+		<p>
+			Bug reports and pull requests are welcome on GitHub at
+			https://github.com/leonism/gemika-json-ld-generator.
+		</p>
+
+		<h2>License</h2>
+		<p>
+			The gem is available as open source under the terms of the
+			<a href="https://opensource.org/licenses/MIT">MIT License</a>
+			.
+		</p>
+	</body>
+</html>
